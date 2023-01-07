@@ -3,6 +3,7 @@ from flask_restx import Api
 from flask_sqlalchemy import SQLAlchemy
 import os
 
+
 class Server:
     def __init__(self):
         self.app = Flask(__name__)
@@ -16,8 +17,8 @@ class Server:
             doc='/docs'
         )
 
-    def run(self):
-        self.app.run(debug=True)
+    def run(self) -> None:
+        self.app.run(debug=True, host="0.0.0.0", port=8080)
 
 
 server = Server()
