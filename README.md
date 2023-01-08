@@ -18,6 +18,9 @@ With the page \docs opened you can expand default, expand POST /initdb, than cli
 
 You can use the previous step to test every route.
 
+# Database diagram
+- The database diagram is in root folder in the file ER-Diagram.png
+
 # Payload examples
 # For route /homepage method POST
 - POST
