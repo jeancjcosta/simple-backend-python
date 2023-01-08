@@ -64,3 +64,16 @@ insert into public.user (id, name, date_joined) values (3, 'Albert', '2021-11-13
 
 insert into public.user (id, name, date_joined) values (4, 'Alice', '2020-10-31');
 ```
+
+# CRITIQUE
+- This project was implemented to be a prototype, so several improvements have to be done to prepare this project to production.
+- One of the improvements is related to the database. The best wey to handle the changes, including the initial setup, is using some tool for migrations.
+- Related to security, it is important to implement authentication and other layers of security. Several of then available in services like Azure or AWS. 
+- To be right that the software works as planned is important to implement, unit tests, integration tests, security tests, performance tests, and so on.
+In any project, it is always a challenge to get the code perfectly how you'd want it. Here is what you need to do for this section:
+
+About the scaling is import highlight some points:
+- if this software were to grow and have many users some steps is important to avoid failures:
+    - Define the policy of development, including git practices like gitflow, project patterns, code organization and documentation;
+    - Use microservices for modules to avoid problems in the entire software and to facilitate maintenance;
+    - Use a service like rancher to manage docker, kubernetes, and deploys. Its important to easily scale the software by demand, even in a temporary demand.  
